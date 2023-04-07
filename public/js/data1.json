@@ -1,0 +1,7 @@
+[
+    {"data": {"id": "0", "label": "Class", "kind": "class"}},
+    {"data": {"id": "1", "label": "Class.function", "kind": "function"}},
+    {"data": {"id": "2", "label": "Class.function.parameter", "kind": "parameter"}},
+    {"data": {"id": "1 -> 0", "label": "definedBy", "kind": "definedBy", "source": "1", "target": "0"}},
+    {"data": {"id": "2 -> 1", "label": "definedBy", "kind": "definedBy", "source": "2", "target": "1"}}
+]

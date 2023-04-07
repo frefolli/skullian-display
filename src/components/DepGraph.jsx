@@ -16,13 +16,19 @@ class DepGraph extends Component {
 
     saveAsPng = () => {
         let blob = this.state.cy.png();
-	saveAs(blob, "graph.png");
+	    saveAs(blob, "graph.png");
+    }
+
+    componentDidUpdate() {
+        if (this.props.shoot) {
+            this.saveAsPng();
+            this.props.shootCallback()
+        }
     }
 
     render() {
         return (
             <div>
-                <button onClick={this.saveAsPng}>save as png</button>
                 <CytoscapeComponent
                     cy={this.assignCy}
                     elements={this.props.elements}
@@ -37,7 +43,7 @@ class DepGraph extends Component {
                               width: 4,
                               targetArrowShape: 'triangle',
                               curveStyle: 'bezier',
-                              label: 'data(label)'
+                              label: 'data(kind)'
                             }
                         },
                         {
@@ -45,7 +51,7 @@ class DepGraph extends Component {
                             style: {
                                 shape: 'hexagon',
                                 'background-color': 'blue',
-                                label: 'data(id)',
+                                label: 'data(label)',
                             }
                         }
                     ]}

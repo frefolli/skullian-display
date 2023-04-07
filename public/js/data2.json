@@ -1,0 +1,7 @@
+[
+    {"data": {"id": "0", "label": "Class", "kind": "class"}},
+    {"data": {"id": "1", "label": "Class2", "kind": "class"}},
+    {"data": {"id": "2", "label": "Class3", "kind": "class"}},
+    {"data": {"id": "1 -> 0", "label": "extends", "kind": "extends", "source": "1", "target": "0"}},
+    {"data": {"id": "2 -> 1", "label": "extends", "kind": "extends", "source": "2", "target": "1"}}
+]
